@@ -40,12 +40,14 @@ autocmd BufRead,BufNewFile *.go    set filetype=go
 autocmd BufRead,BufNewFile *.java  set filetype=java
 autocmd BufRead,BufNewFile *.py    set filetype=python
 autocmd BufRead,BufNewFile *.rb    set filetype=ruby
+autocmd BufRead,BufNewFile *.erb   set filetype=eruby
 autocmd BufRead,BufNewFile *.js    set filetype=javascript
 
 autocmd FileType java       set tabstop=8 noexpandtab
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType sql        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType ruby       set tabstop=2 softtabstop=2 expandtab
+autocmd FileType eruby      set tabstop=2 softtabstop=2 expandtab
 autocmd FileType html       set tabstop=4 noexpandtab
 autocmd FileType javascript set tabstop=4 noexpandtab
 
