@@ -27,6 +27,7 @@ set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
 
 autocmd BufRead,BufNewFile *.txt   set filetype=text
 autocmd BufRead,BufNewFile *.md    set filetype=text
+autocmd BufRead,BufNewFile *.tex   set filetype=tex
 autocmd BufRead,BufNewFile *.html  set filetype=html
 autocmd BufRead,BufNewFile *.htm   set filetype=html
 autocmd BufRead,BufNewFile *.shtml set filetype=html
@@ -55,6 +56,7 @@ autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
 
 autocmd FileType text       set textwidth=79 " Wrap after 79 characters.
+autocmd FileType tex        set textwidth=79 " Wrap after 79 characters.
 autocmd FileType gitcommit  set textwidth=79 colorcolumn=50,80
 
 " ######################################################################
