@@ -118,7 +118,7 @@ timer() {
 }
 
 todo() {
-    vim ~/.todo
+    $EDITOR ~/.todo
 }
 
 if [ -f ~/.bashrc.local ]
