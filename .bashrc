@@ -2,7 +2,7 @@
 
 export PS1='\w\$ '
 export EDITOR=vim
-export GIT_EDITOR=vim
+export GIT_EDITOR=$EDITOR
 
 countdown() {
     if [ $# -ne 1 ]
