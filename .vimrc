@@ -58,7 +58,7 @@ autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
 
 autocmd FileType text       set textwidth=79 " Wrap after 79 characters.
 autocmd FileType tex        set textwidth=79 " Wrap after 79 characters.
-autocmd FileType gitcommit  set textwidth=79 colorcolumn=50,80
+autocmd FileType gitcommit  set textwidth=72 colorcolumn=50,72
 
 " ######################################################################
 " # KEY MAPPINGS
