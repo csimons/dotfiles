@@ -7,6 +7,7 @@
 set fileencodings=utf-8
 
 syntax on                " Syntax highlighting.
+set autoindent           " Auto-indent upon opening new line.
 set colorcolumn=80       " Show width boundary.
 highlight ColorColumn ctermbg=1
 
