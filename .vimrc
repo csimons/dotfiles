@@ -46,6 +46,7 @@ autocmd BufRead,BufNewFile *.erb   set filetype=eruby
 autocmd BufRead,BufNewFile *.js    set filetype=javascript
 
 autocmd FileType java       set tabstop=8 noexpandtab
+autocmd FileType go         set tabstop=8 noexpandtab
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType sql        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType ruby       set tabstop=2 softtabstop=2 expandtab
