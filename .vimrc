@@ -26,6 +26,8 @@ set listchars=tab:>-,trail:~         " Whitespace display modifications.
 " File tab-completion modifications.
 set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
 
+autocmd BufRead,BufNewFile .todo   set filetype=text
+autocmd BufRead,BufNewFile .plan   set filetype=text
 autocmd BufRead,BufNewFile *.txt   set filetype=text
 autocmd BufRead,BufNewFile *.md    set filetype=text
 autocmd BufRead,BufNewFile *.tex   set filetype=tex
@@ -45,6 +47,7 @@ autocmd BufRead,BufNewFile *.rb    set filetype=ruby
 autocmd BufRead,BufNewFile *.erb   set filetype=eruby
 autocmd BufRead,BufNewFile *.js    set filetype=javascript
 
+autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
 autocmd FileType java       set tabstop=8 noexpandtab
 autocmd FileType go         set tabstop=8 noexpandtab
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab
