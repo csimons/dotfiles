@@ -36,6 +36,7 @@ autocmd BufRead,BufNewFile *.htm   set filetype=html
 autocmd BufRead,BufNewFile *.shtml set filetype=html
 autocmd BufRead,BufNewFile *.ftl   set filetype=html
 autocmd BufRead,BufNewFile *.buf   set filetype=sql
+autocmd BufRead,BufNewFile *.pkb   set filetype=sql
 autocmd BufRead,BufNewFile *.fnc   set filetype=sql
 autocmd BufRead,BufNewFile *.fn    set filetype=sql
 autocmd BufRead,BufNewFile *.prc   set filetype=sql
