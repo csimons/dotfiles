@@ -122,6 +122,11 @@ todo() {
     $EDITOR ~/.todo
 }
 
+if [ -f ~/.motd ]
+then
+    cat ~/.motd
+fi
+
 if [ -f ~/.bashrc.local ]
 then
     source ~/.bashrc.local
