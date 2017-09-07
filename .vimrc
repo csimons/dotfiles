@@ -47,6 +47,7 @@ autocmd BufRead,BufNewFile *.py    set filetype=python
 autocmd BufRead,BufNewFile *.rb    set filetype=ruby
 autocmd BufRead,BufNewFile *.erb   set filetype=eruby
 autocmd BufRead,BufNewFile *.js    set filetype=javascript
+autocmd BufRead,BufNewFile *.vimrc set filetype=vim
 
 autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
 autocmd FileType java       set tabstop=8 noexpandtab
@@ -56,7 +57,8 @@ autocmd FileType sql        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType ruby       set tabstop=2 softtabstop=2 expandtab
 autocmd FileType eruby      set tabstop=2 softtabstop=2 expandtab
 autocmd FileType html       set tabstop=4 noexpandtab
-autocmd FileType javascript set tabstop=4 noexpandtab
+autocmd FileType vim        set tabstop=4 softtabstop=4 expandtab
+autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab
 
 autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
