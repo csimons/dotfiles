@@ -1,3 +1,6 @@
+--exclude=.git
+--exclude=node_modules
+
 --langdef=plsql
 --langmap=plsql:.plsql.sql.prc.fn.fnc.sp.pkb.pks.vw
 --regex-plsql=/[ \t]*(procedure|function|package body|create or replace view|PROCEDURE|FUNCTION|PACKAGE BODY|CREATE OR REPLACE VIEW)[ \t]*([a-zA-Z0-9_]+)/\2/d,definition/
