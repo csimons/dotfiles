@@ -30,6 +30,7 @@ autocmd BufRead,BufNewFile .todo   set filetype=text
 autocmd BufRead,BufNewFile .plan   set filetype=text
 autocmd BufRead,BufNewFile *.txt   set filetype=text
 autocmd BufRead,BufNewFile *.md    set filetype=text
+autocmd BufRead,BufNewFile *.local set filetype=text
 autocmd BufRead,BufNewFile *.tex   set filetype=tex
 autocmd BufRead,BufNewFile *.html  set filetype=html
 autocmd BufRead,BufNewFile *.htm   set filetype=html
