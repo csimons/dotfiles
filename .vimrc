@@ -30,7 +30,6 @@ autocmd BufRead,BufNewFile .todo   set filetype=text
 autocmd BufRead,BufNewFile .plan   set filetype=text
 autocmd BufRead,BufNewFile *.txt   set filetype=text
 autocmd BufRead,BufNewFile *.md    set filetype=text
-autocmd BufRead,BufNewFile *.local set filetype=text
 autocmd BufRead,BufNewFile *.tex   set filetype=tex
 autocmd BufRead,BufNewFile *.html  set filetype=html
 autocmd BufRead,BufNewFile *.htm   set filetype=html
@@ -80,6 +79,6 @@ map <C-h> :vimgrep <cword> **/* <bar> :cw <Enter>
 " # PROJECT OVERRIDE CAPABILITY
 " ######################################################################
 
-if filereadable(".vimrc.local")
-    source .vimrc.local
+if filereadable(".local.vimrc")
+    source .local.vimrc
 endif

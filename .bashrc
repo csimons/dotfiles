@@ -127,7 +127,7 @@ then
     cat ~/.motd
 fi
 
-if [ -f ~/.bashrc.local ]
+if [ -f ~/.local.bashrc ]
 then
-    source ~/.bashrc.local
+    source ~/.local.bashrc
 fi
