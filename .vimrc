@@ -48,8 +48,12 @@ autocmd BufRead,BufNewFile *.rb     set filetype=ruby
 autocmd BufRead,BufNewFile *.erb    set filetype=eruby
 autocmd BufRead,BufNewFile *.js     set filetype=javascript
 autocmd BufRead,BufNewFile *.vimrc  set filetype=vim
+autocmd BufRead,BufNewFile *.sh     set filetype=sh
+autocmd BufRead,BufNewFile *.bash   set filetype=sh
+autocmd BufRead,BufNewFile *.bashrc set filetype=sh
 
 autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
+autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
 autocmd FileType java       set tabstop=8 noexpandtab
 autocmd FileType go         set tabstop=8 noexpandtab
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab
