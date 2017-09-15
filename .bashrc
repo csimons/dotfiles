@@ -3,6 +3,7 @@
 export PS1='\w\$ '
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
+export FORCE_COLOR=1
 
 countdown() {
     if [ $# -ne 1 ]
