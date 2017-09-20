@@ -53,6 +53,7 @@ autocmd BufRead,BufNewFile *.bash   set filetype=sh
 autocmd BufRead,BufNewFile *.bashrc set filetype=sh
 
 autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
+autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
 autocmd FileType java       set tabstop=8 noexpandtab
 autocmd FileType go         set tabstop=8 noexpandtab
