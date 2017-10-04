@@ -103,6 +103,11 @@ site() {
     fi
 }
 
+sloc() {
+    echo -n 'Computing SLOC for current directory ... '
+    echo $(cat $(file $(find . -type f) | egrep -vi '(image|icon|audio|font|flash)' | cut -d : -f 1) | wc -l)
+}
+
 timer() {
     if [ $# -ne 0 ]
     then
