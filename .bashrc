@@ -104,8 +104,11 @@ site() {
 }
 
 sloc() {
+    #
+    # TODO: fix for directories with whitespace in their names
+    #
     echo -n 'Computing SLOC for current directory ... '
-    echo $(cat $(file $(find . -type f) | egrep -vi '(image|icon|audio|font|flash)' | cut -d : -f 1) | wc -l)
+    echo $(cat $(find . -type f | egrep -v '(\.git|\.svn| |jpg|gif|png|ttf|woff|eot)') | wc -l)
 }
 
 timer() {
