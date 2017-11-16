@@ -5,6 +5,8 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 
+alias lynx='lynx -accept_all_cookies'
+
 countdown() {
     if [ $# -ne 1 ]
     then
