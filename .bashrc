@@ -83,6 +83,10 @@ lmake() {
     fi
 }
 
+motd() {
+    cat ~/.motd
+}
+
 site() {
     if [ $# -eq 0 ]
     then
