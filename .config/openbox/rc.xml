@@ -26,6 +26,14 @@
 			<command>chromium-browser</command>
 		</action>
 	</keybind>
+
+	<keybind key="A-Tab">
+		<action name="NextWindow" />
+	</keybind>
+
+	<keybind key="A-S-Tab">
+		<action name="PreviousWindow" />
+	</keybind>
 </keyboard>
 
 <applications>
