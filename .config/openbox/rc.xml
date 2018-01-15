@@ -23,7 +23,7 @@
 
 	<keybind key="A-S-w">
 		<action name="Execute">
-			<command>chromium-browser</command>
+			<command>chromium</command>
 		</action>
 	</keybind>
 
