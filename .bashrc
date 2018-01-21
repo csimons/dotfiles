@@ -139,7 +139,7 @@ todo() {
 
 if [ -f ~/.motd ]
 then
-    cat ~/.motd
+    cat ~/.motd | head -n 1
 fi
 
 if [ -f ~/.local.bashrc ]
