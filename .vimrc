@@ -66,6 +66,7 @@ autocmd FileType eruby      set tabstop=2 softtabstop=2 expandtab
 autocmd FileType html       set tabstop=4 noexpandtab
 autocmd FileType vim        set tabstop=4 softtabstop=4 expandtab
 autocmd FileType xml        set tabstop=4 softtabstop=4 noexpandtab
+autocmd FileType yaml       set tabstop=2 softtabstop=2 expandtab
 autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab
                             \ wildignore+=node_modules/**
 
