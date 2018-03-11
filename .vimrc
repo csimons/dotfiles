@@ -53,7 +53,7 @@ autocmd BufRead,BufNewFile *.bash   set filetype=sh
 autocmd BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile *.tbl    set filetype=table
 
-autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
+autocmd FileType text       set tabstop=4 softtabstop=4 noexpandtab
 autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
