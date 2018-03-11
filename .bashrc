@@ -87,6 +87,25 @@ motd() {
     cat ~/.motd
 }
 
+mvn() {
+    if [ $# -lt 1 ]
+    then
+        echo "usage: mvn <args>"
+        return 1
+    elif [ -z "$MAVEN_HOME" ]
+    then
+        echo '$MAVEN_HOME is not set'
+        return 1
+    elif [ -f './mvnw' ]
+    then
+        echo "changing command to the following: ./mvnw $*"
+        ./mvnw $*
+    else
+        echo "no wrapper found; executing: ${MAVEN_HOME}/bin/mvn $*"
+        $MAVEN_HOME/bin/mvn $*
+    fi
+}
+
 site() {
     if [ $# -eq 0 ]
     then
