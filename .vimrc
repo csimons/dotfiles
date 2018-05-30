@@ -26,7 +26,6 @@ set listchars=tab:>-,trail:~         " Whitespace display modifications.
 " File tab-completion modifications.
 set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
 
-autocmd BufRead,BufNewFile .todo    set filetype=text
 autocmd BufRead,BufNewFile .plan    set filetype=text
 autocmd BufRead,BufNewFile *.txt    set filetype=text
 autocmd BufRead,BufNewFile *.md     set filetype=text
@@ -52,8 +51,12 @@ autocmd BufRead,BufNewFile *.sh     set filetype=sh
 autocmd BufRead,BufNewFile *.bash   set filetype=sh
 autocmd BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile *.tbl    set filetype=table
+autocmd BufRead,BufNewFile .todo    set filetype=todo
+autocmd BufRead,BufNewFile README.txt set filetype=readme
 
-autocmd FileType text       set tabstop=4 softtabstop=4 noexpandtab
+autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
+autocmd FileType todo       set tabstop=4 softtabstop=4 expandtab
+autocmd FileType readme     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
