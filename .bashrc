@@ -136,6 +136,10 @@ sloc() {
     echo $(cat $(find . -type f | egrep -v '(\.git|\.svn| |jpg|gif|png|ttf|woff|eot)') | wc -l)
 }
 
+slog() {
+    svn log --stop-on-copy $* | less
+}
+
 timer() {
     if [ $# -ne 0 ]
     then
