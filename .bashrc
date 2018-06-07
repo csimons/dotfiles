@@ -108,17 +108,29 @@ mvn() {
 }
 
 site() {
+    if [ -z "$NFSN_USER" ]
+    then
+        echo '$NFSN_USER is not set'
+        return 1
+    fi
+
+    if [ -z "$NFSN_HOST" ]
+    then
+        echo '$NFSN_HOST is not set'
+        return 1
+    fi
+
     if [ $# -eq 0 ]
     then
-        ssh $NFSN_USER@$NFSN_DOMAIN
+        ssh $NFSN_USER@$NFSN_HOST
     elif [ $# -eq 2 ]
     then
         if [ "$1" == "up" ]
         then
-            scp $2 $NFSN_USER@$NFSN_DOMAIN:~/
+            scp $2 $NFSN_USER@$NFSN_HOST:~/
         elif [ "$1" == "down" ]
         then
-            scp $NFSN_USER@$NFSN_DOMAIN:~/$2 .
+            scp $NFSN_USER@$NFSN_HOST:~/$2 .
         else
             echo 'usage: site [ ( up | down ) FILE ]'
             return 1
