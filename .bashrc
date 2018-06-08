@@ -173,6 +173,76 @@ todo() {
     $EDITOR ~/.todo
 }
 
+winjdk-unpack() {
+    if [ "$#" -ne '1' ]
+    then
+        echo 'usage: jdk-unpack FILENAME'
+        return 1
+    fi
+
+    if [ ! -f "$1" ]
+    then
+        echo "file not found: $1"
+        return 1
+    fi
+
+    tmpdir="$1__unpack"
+
+    if [ -d $tmpdir ]
+    then
+        echo "$tmpdir/ already exists.  Aborting."
+        return 1
+    fi
+
+    mkdir $tmpdir
+    cd $tmpdir
+
+    echo -n "Unpacking CAB ... "
+    cabextract ../$1 > /dev/null 2>&1
+    if [ "$?" -ne '0' ]
+    then
+        echo 'failed.  Aborting.'
+        return 1
+    fi
+    rm COPYRIGHT jaureg jre.exe jucheck jusched src.zip
+    if [ "$?" -ne '0' ]
+    then
+        echo 'failed.  Aborting.'
+        return 1
+    fi
+    echo "ok."
+
+    echo -n "Unpacking JDK tools ... "
+    unzip tools.zip > /dev/null 2>&1
+    if [ "$?" -ne '0' ]
+    then
+        echo 'failed.  Aborting.'
+        return 1
+    fi
+    rm tools.zip
+    if [ "$?" -ne '0' ]
+    then
+        echo 'failed.  Aborting.'
+        return 1
+    fi
+    echo "ok."
+
+    echo -n "Unpacking JDK pack files ... "
+    for packfile in $(find . -type f -name '*.pack')
+    do
+        base=${packfile%\.*};
+        ./jre/bin/unpack200.exe "$base.pack" "$base.jar"
+        if [ "$?" -ne '0' ]
+        then
+            echo 'failed.  Aborting.'
+            return 1
+        fi
+    done
+    echo "ok."
+
+    cd ..
+}
+
 if [ -f ~/.motd ]
 then
     cat ~/.motd | head -n 1
