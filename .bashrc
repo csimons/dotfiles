@@ -176,7 +176,7 @@ todo() {
 winjdk-unpack() {
     if [ "$#" -ne '1' ]
     then
-        echo 'usage: jdk-unpack FILENAME'
+        echo 'usage: winjdk-unpack FILENAME'
         return 1
     fi
 
