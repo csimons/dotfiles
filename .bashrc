@@ -145,7 +145,7 @@ sloc() {
     #
     # TODO: fix for directories with whitespace in their names
     #
-    echo $(cat $(find . -type f | egrep -v '(\.git|\.svn| |jpg|gif|png|ttf|woff|eot)') | wc -l)
+    echo $(cat $(find . -type f | egrep -v '(\.git|\.svn|target| |jpg|gif|png|ttf|woff|eot)') | wc -l)
 }
 
 sloc-dir() {
