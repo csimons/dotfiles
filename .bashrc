@@ -148,6 +148,18 @@ sloc() {
     echo $(cat $(find . -type f | egrep -v '(\.git|\.svn| |jpg|gif|png|ttf|woff|eot)') | wc -l)
 }
 
+sloc-dir() {
+    for i in $(ls | sort)
+    do
+        if [ -d "$i" ]
+        then
+            pushd "$i" > /dev/null
+            echo "$(sloc) $i"
+            popd > /dev/null
+        fi
+    done
+}
+
 slog() {
     svn log --stop-on-copy $* | less
 }
