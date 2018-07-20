@@ -149,7 +149,7 @@ sloc() {
 }
 
 sloc-dir() {
-    for i in $(ls | sort)
+    for i in $(ls --color=no | sort)
     do
         if [ -d "$i" ]
         then
