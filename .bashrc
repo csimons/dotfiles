@@ -4,7 +4,7 @@ export PS1='\w\$ '
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
-export PATH=$PATH:~/bin
+export PATH=~/bin:$PATH
 
 alias lynx='lynx -accept_all_cookies'
 
