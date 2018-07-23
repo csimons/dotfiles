@@ -34,6 +34,23 @@ gdiff() {
     git diff --no-index --ignore-space-at-eol -- $1 $2
 }
 
+jarfind() {
+    if [ "$#" -ne 1 ]
+    then
+        echo 'usage: jar-find filename'
+        return 1
+    fi
+
+    local target=$1
+    for filename in $(find . -type f -name '*.jar')
+    do
+        for hit in $(jar tf $filename | grep $target)
+        do
+            echo "$filename: $hit"
+        done
+    done
+}
+
 lclean() {
     rm -f \
         *-blx.bib \
