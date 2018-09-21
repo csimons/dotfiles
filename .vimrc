@@ -61,7 +61,7 @@ autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
 autocmd FileType java       set tabstop=4 softtabstop=4 noexpandtab number
-autocmd FileType go         set tabstop=8 noexpandtab number
+autocmd FileType go         set tabstop=8 softtabstop=8 noexpandtab number
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType sql        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType ruby       set tabstop=2 softtabstop=2 expandtab
