@@ -1,6 +1,7 @@
 --exclude=.git
 --exclude=node_modules
 --exclude=target
+--exclude=bindata.go
 
 --langdef=plsql
 --langmap=plsql:.plsql.sql.prc.fn.fnc.sp.pkb.pks.vw
