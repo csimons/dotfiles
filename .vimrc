@@ -56,6 +56,7 @@ autocmd BufRead,BufNewFile README.txt set filetype=readme
 
 autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
 autocmd FileType todo       set tabstop=4 softtabstop=4 expandtab
+                            \ textwidth=71 colorcolumn=72
 autocmd FileType readme     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
