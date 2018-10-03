@@ -9,7 +9,7 @@
 
 --langdef=go
 --langmap=go:.go
---regex-go=/[ \t]*(func|type|var)[ \t]*([a-zA-Z0-9_]+)/\2/d,definition/
+--regex-go=/(func|type|var)[ \t]*([a-zA-Z0-9_]+)/\2/d,definition/
 
 --langdef=js
 --langmap=js:.js
