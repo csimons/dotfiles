@@ -34,6 +34,48 @@ gdiff() {
     git diff --no-index --ignore-space-at-eol -- $1 $2
 }
 
+git-author-rewrite() {
+    # usage:
+    #
+    #   Adapted from https://help.github.com/articles/changing-author-info/
+    #
+    #     $ git clone --bare https://github.com/user/repo.git
+    #     $ cd repo.git
+    #     $ OLD_EMAIL=... NEW_NAME=... NEW_EMAIL=... git-author-rewrite
+    #     $ # review git log here to verify expectations ...
+    #     $ git push --force --tags origin 'refs/heads/*'
+    #
+
+    vars_msg='must be set: $OLD_EMAIL, $NEW_NAME, $NEW_EMAIL'
+
+    if [ -z "$OLD_EMAIL" ]
+    then
+        echo $vars_msg
+        return 1
+    elif [ -z "$NEW_NAME" ]
+    then
+        echo $vars_msg
+        return 1
+    elif [ -z "$NEW_EMAIL" ]
+    then
+        echo $vars_msg
+        return 1
+    fi
+
+    git filter-branch --env-filter '
+if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_COMMITTER_NAME="$NEW_NAME"
+    export GIT_COMMITTER_EMAIL="$NEW_EMAIL"
+fi
+if [ "$GIT_AUTHOR_EMAIL" = "$OLD_EMAIL" ]
+then
+    export GIT_AUTHOR_NAME="$NEW_NAME"
+    export GIT_AUTHOR_EMAIL="$NEW_EMAIL"
+fi
+' --tag-name-filter cat -- --branches --tags
+}
+
 jarfind() {
     if [ "$#" -ne 1 ]
     then
