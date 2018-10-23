@@ -24,6 +24,19 @@ countdown() {
     done
 }
 
+dirsloc() {
+    for i in $(ls)
+    do
+        if [ -d "$i" ]
+        then
+            cd "$i"
+            echo "----- $i -----"
+            echo $(cat $(find . -type f | egrep -v '(\.git|\.svn|target| |jpg|gif|png|ttf|woff|eot)') | wc -l)
+            cd - >/dev/null
+        fi
+    done
+}
+
 gdiff() {
     if [ $# -ne 2 ]
     then
