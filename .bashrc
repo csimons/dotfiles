@@ -143,6 +143,68 @@ lmake() {
     fi
 }
 
+lsdiff() {
+    msg='usage: lsdiff [-r] DIR1 DIR2'
+
+    recursive=0
+    if [ "$#" == '3' ] && [ "$1" == '-r' ]
+    then
+        recursive=1
+        dirA="$2"
+        dirB="$3"
+    elif [ "$#" == '2' ]
+    then
+        dirA="$1"
+        dirB="$2"
+    else
+        echo $msg
+        return 1
+    fi
+
+    if [ ! -d "$dirA" ]
+    then
+        echo $msg
+        return 1
+    fi
+
+    if [ ! -d "$dirB" ]
+    then
+        echo $msg
+        return 1
+    fi
+
+    a=$(mktemp)
+    b=$(mktemp)
+
+    pushd "$dirA" >/dev/null
+    if [ "$recursive" == '1' ]
+    then
+        find . | sort > $a
+    else
+        ls | sort > $a
+    fi
+    popd >/dev/null
+
+    pushd "$dirB" >/dev/null
+    if [ "$recursive" == '1' ]
+    then
+        find . | sort > $b
+    else
+        ls | sort > $b
+    fi
+    popd >/dev/null
+
+    if hash git 2>/dev/null
+    then
+        git diff --no-index -- $a $b
+    else
+        diff $a $b
+    fi
+
+    rm $a
+    rm $b
+}
+
 motd() {
     cat ~/.motd
 }
