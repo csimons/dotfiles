@@ -79,7 +79,7 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab number
 autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
 
-autocmd FileType text       set textwidth=71 " Wrap after N characters.
+autocmd FileType text       set textwidth=79 " Wrap after N characters.
 autocmd FileType tex        set textwidth=71 " Wrap after N characters.
 autocmd FileType gitcommit  set tabstop=4 softtabstop=4 expandtab
                             \ textwidth=71 colorcolumn=50,72
