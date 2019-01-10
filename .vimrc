@@ -27,6 +27,7 @@ set listchars=tab:>-,trail:~         " Whitespace display modifications.
 set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
 
 autocmd BufRead,BufNewFile .plan    set filetype=text
+autocmd BufRead,BufNewFile *.cpp    set filetype=cpp
 autocmd BufRead,BufNewFile *.rs     set filetype=rust
 autocmd BufRead,BufNewFile *.txt    set filetype=text
 autocmd BufRead,BufNewFile *.md     set filetype=text
@@ -62,6 +63,7 @@ autocmd FileType readme     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
+autocmd FileType cpp        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType java       set tabstop=4 softtabstop=4 noexpandtab number
 autocmd FileType go         set tabstop=8 softtabstop=8 noexpandtab number
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab number
