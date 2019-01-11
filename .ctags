@@ -12,6 +12,10 @@
 --regex-go=/(const|type|var)[ \t]*([a-zA-Z0-9_]+)/\2/d,definition/
 --regex-go=/func([ \t]+\([^)]+\))?[ \t]+([a-zA-Z0-9_]+)/\2/d,func/
 
+--langdef=protobuf
+--langmap=protobuf:.proto
+--regex-protobuf=/message[ \t]*([a-zA-Z0-9_]+)/\1/m,message/
+
 --langdef=js
 --langmap=js:.js
 --langmap=js:+.jsx
