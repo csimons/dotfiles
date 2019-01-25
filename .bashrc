@@ -126,6 +126,26 @@ lclean() {
         *.tex.blg
 }
 
+libfind() {
+    if [ $# -ne 2 ]
+    then
+        >&2 echo "usage: libfind SYMBOL ROOTPATH"
+        return 1
+    fi
+
+    SYMBOL=$1
+    ROOTPATH=$2
+
+    for candidate in $(find $ROOTPATH -type f 2>&1 | egrep '\.(a|o|so|dylib)$')
+    do
+        count=$(nm -g $candidate 2>&1 | grep $SYMBOL | wc -l)
+        if [ $count != 0 ]
+        then
+            echo $candidate
+        fi
+    done
+}
+
 lmake() {
     if [ $# -ne 1 ]
     then
