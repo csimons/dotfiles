@@ -30,6 +30,7 @@ set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
 
 autocmd BufRead,BufNewFile .plan    set filetype=text
 autocmd BufRead,BufNewFile *.cpp    set filetype=cpp
+autocmd BufRead,BufNewFile *.hpp    set filetype=cpp
 autocmd BufRead,BufNewFile *.rs     set filetype=rust
 autocmd BufRead,BufNewFile *.txt    set filetype=text
 autocmd BufRead,BufNewFile *.md     set filetype=text
