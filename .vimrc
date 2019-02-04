@@ -29,6 +29,8 @@ highlight SpecialKey ctermfg=1 ctermbg=none
 set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
 
 autocmd BufRead,BufNewFile .plan    set filetype=text
+autocmd BufRead,BufNewFile *.c      set filetype=c
+autocmd BufRead,BufNewFile *.h      set filetype=c
 autocmd BufRead,BufNewFile *.cpp    set filetype=cpp
 autocmd BufRead,BufNewFile *.hpp    set filetype=cpp
 autocmd BufRead,BufNewFile *.rs     set filetype=rust
@@ -68,6 +70,7 @@ autocmd FileType readme     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
+autocmd FileType c          set number
 autocmd FileType cpp        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType java       set tabstop=4 softtabstop=4 noexpandtab number
 autocmd FileType go         set tabstop=8 softtabstop=8 noexpandtab number
