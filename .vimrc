@@ -61,6 +61,7 @@ autocmd BufRead,BufNewFile *.bash   set filetype=sh
 autocmd BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile *.tbl    set filetype=table
 autocmd BufRead,BufNewFile .todo    set filetype=todo
+autocmd BufRead,BufNewFile *.1      set filetype=roff
 autocmd BufRead,BufNewFile README.txt set filetype=readme
 
 autocmd FileType text       set tabstop=4 softtabstop=4 expandtab
@@ -91,6 +92,8 @@ autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
 
 autocmd FileType text       set textwidth=79 " Wrap after N characters.
 autocmd FileType tex        set textwidth=71 " Wrap after N characters.
+autocmd FileType roff       set tabstop=4 softtabstop=4 expandtab
+                            \ textwidth=71 colorcolumn=72
 autocmd FileType gitcommit  set tabstop=4 softtabstop=4 expandtab
                             \ textwidth=71 colorcolumn=50,72
 
