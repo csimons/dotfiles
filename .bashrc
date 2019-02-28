@@ -30,8 +30,7 @@ dirsloc() {
         if [ -d "$i" ]
         then
             cd "$i"
-            echo "----- $i -----"
-            echo $(cat $(find . -type f | egrep -v '(\.git|\.svn|target| |jpg|gif|png|ttf|woff|eot)') | wc -l)
+            echo $(cat $(find . -type f | egrep -v '(\.git|\.svn|target| |jpg|gif|png|ttf|woff|eot)') | wc -l)	$i
             cd - >/dev/null
         fi
     done
