@@ -86,6 +86,7 @@ autocmd FileType xml        set tabstop=4 softtabstop=4 noexpandtab
 autocmd FileType yaml       set tabstop=2 softtabstop=2 expandtab
 autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab number
                             \ wildignore+=node_modules/**
+autocmd FileType dockerfile set tabstop=4 softtabstop=4 expandtab
 
 autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
