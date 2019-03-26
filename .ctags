@@ -2,6 +2,7 @@
 --exclude=node_modules
 --exclude=target
 --exclude=bindata.go
+--exclude=*.bundle.js
 
 --langdef=go
 --langmap=go:.go
