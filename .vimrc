@@ -55,6 +55,7 @@ autocmd BufRead,BufNewFile *.py     set filetype=python
 autocmd BufRead,BufNewFile *.rb     set filetype=ruby
 autocmd BufRead,BufNewFile *.erb    set filetype=eruby
 autocmd BufRead,BufNewFile *.js     set filetype=javascript
+autocmd BufRead,BufNewFile *.ts     set filetype=typescript
 autocmd BufRead,BufNewFile *.vimrc  set filetype=vim
 autocmd BufRead,BufNewFile *.sh     set filetype=sh
 autocmd BufRead,BufNewFile *.bash   set filetype=sh
@@ -85,6 +86,8 @@ autocmd FileType vim        set tabstop=4 softtabstop=4 expandtab
 autocmd FileType xml        set tabstop=4 softtabstop=4 noexpandtab
 autocmd FileType yaml       set tabstop=2 softtabstop=2 expandtab
 autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab number
+                            \ wildignore+=node_modules/**
+autocmd FileType typescript set tabstop=4 softtabstop=4 expandtab number
                             \ wildignore+=node_modules/**
 autocmd FileType dockerfile set tabstop=4 softtabstop=4 expandtab
 
