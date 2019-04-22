@@ -11,7 +11,7 @@ alias lynx='lynx -accept_all_cookies'
 countdown() {
     if [ $# -ne 1 ]
     then
-        echo 'usage: countdown SECONDS'
+        >&2 echo 'usage: countdown SECONDS'
         return 1
     fi
 
@@ -39,7 +39,7 @@ dirsloc() {
 gdiff() {
     if [ $# -ne 2 ]
     then
-        echo 'usage: gdiff fileA fileB'
+        >&2 echo 'usage: gdiff fileA fileB'
         return 1
     fi
 
@@ -62,15 +62,15 @@ git-author-rewrite() {
 
     if [ -z "$OLD_EMAIL" ]
     then
-        echo $vars_msg
+        >&2 echo $vars_msg
         return 1
     elif [ -z "$NEW_NAME" ]
     then
-        echo $vars_msg
+        >&2 echo $vars_msg
         return 1
     elif [ -z "$NEW_EMAIL" ]
     then
-        echo $vars_msg
+        >&2 echo $vars_msg
         return 1
     fi
 
@@ -91,7 +91,7 @@ fi
 jarfind() {
     if [ "$#" -ne 1 ]
     then
-        echo 'usage: jar-find filename'
+        >&2 echo 'usage: jar-find filename'
         return 1
     fi
 
@@ -148,11 +148,11 @@ libfind() {
 lmake() {
     if [ $# -ne 1 ]
     then
-        echo "usage: $0 TEX_FILE"
+        >&2 echo "usage: $0 TEX_FILE"
         return 1
     elif [ -z "$PDF_VIEWER" ]
     then
-        echo '$PDF_VIEWER must be set to open PDFs'
+        >&2 echo '$PDF_VIEWER must be set to open PDFs'
         return 1
     else
         local rawName=${1%\.*}
@@ -189,19 +189,19 @@ lsdiff() {
         dirA="$1"
         dirB="$2"
     else
-        echo $msg
+        >&2 echo $msg
         return 1
     fi
 
     if [ ! -d "$dirA" ]
     then
-        echo $msg
+        >&2 echo $msg
         return 1
     fi
 
     if [ ! -d "$dirB" ]
     then
-        echo $msg
+        >&2 echo $msg
         return 1
     fi
 
@@ -244,11 +244,11 @@ motd() {
 mvn() {
     if [ $# -lt 1 ]
     then
-        echo "usage: mvn <args>"
+        >&2 echo "usage: mvn <args>"
         return 1
     elif [ -z "$MAVEN_HOME" ]
     then
-        echo '$MAVEN_HOME is not set'
+        >&2 echo '$MAVEN_HOME is not set'
         return 1
     elif [ -f './mvnw' ]
     then
@@ -263,13 +263,13 @@ mvn() {
 site() {
     if [ -z "$NFSN_USER" ]
     then
-        echo '$NFSN_USER is not set'
+        >&2 echo '$NFSN_USER is not set'
         return 1
     fi
 
     if [ -z "$NFSN_HOST" ]
     then
-        echo '$NFSN_HOST is not set'
+        >&2 echo '$NFSN_HOST is not set'
         return 1
     fi
 
@@ -285,11 +285,11 @@ site() {
         then
             scp $NFSN_USER@$NFSN_HOST:~/$2 .
         else
-            echo 'usage: site [ ( up | down ) FILE ]'
+            >&2 echo 'usage: site [ ( up | down ) FILE ]'
             return 1
         fi
     else
-        echo 'usage: site [ ( up | down ) FILE ]'
+        >&2 echo 'usage: site [ ( up | down ) FILE ]'
         return 1
     fi
 }
@@ -320,7 +320,7 @@ slog() {
 timer() {
     if [ $# -ne 0 ]
     then
-        echo 'usage: timer'
+        >&2 echo 'usage: timer'
         return 1
     fi
 
@@ -340,13 +340,13 @@ todo() {
 winjdk-unpack() {
     if [ "$#" -ne '1' ]
     then
-        echo 'usage: winjdk-unpack FILENAME'
+        >&2 echo 'usage: winjdk-unpack FILENAME'
         return 1
     fi
 
     if [ ! -f "$1" ]
     then
-        echo "file not found: $1"
+        >&2 echo "file not found: $1"
         return 1
     fi
 
@@ -354,7 +354,7 @@ winjdk-unpack() {
 
     if [ -d $tmpdir ]
     then
-        echo "$tmpdir/ already exists.  Aborting."
+        >&2 echo "$tmpdir/ already exists.  Aborting."
         return 1
     fi
 
