@@ -61,6 +61,7 @@ autocmd BufRead,BufNewFile *.sh     set filetype=sh
 autocmd BufRead,BufNewFile *.bash   set filetype=sh
 autocmd BufRead,BufNewFile *.bashrc set filetype=sh
 autocmd BufRead,BufNewFile *.tbl    set filetype=table
+autocmd BufRead,BufNewFile *.json   set filetype=json
 autocmd BufRead,BufNewFile .todo    set filetype=todo
 autocmd BufRead,BufNewFile *.1      set filetype=roff
 autocmd BufRead,BufNewFile README.txt set filetype=readme
@@ -70,6 +71,7 @@ autocmd FileType todo       set tabstop=4 softtabstop=4 expandtab
                             \ textwidth=71 colorcolumn=72
 autocmd FileType readme     set tabstop=4 softtabstop=4 expandtab
 autocmd FileType table      set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
+autocmd FileType json       set tabstop=4 softtabstop=4 expandtab colorcolumn=0 textwidth=0
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab
 autocmd FileType c          set number ts=8
