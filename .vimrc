@@ -85,6 +85,7 @@ autocmd FileType ruby       set tabstop=2 softtabstop=2 expandtab
 autocmd FileType eruby      set tabstop=2 softtabstop=2 expandtab
 autocmd FileType php        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType html       set tabstop=4 noexpandtab
+autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType vim        set tabstop=4 softtabstop=4 expandtab
 autocmd FileType xml        set tabstop=4 softtabstop=4 noexpandtab
 autocmd FileType yaml       set tabstop=2 softtabstop=2 expandtab
