@@ -9,7 +9,7 @@ set fileencodings=utf-8
 syntax on                " Syntax highlighting.
 set autoindent           " Auto-indent upon opening new line.
 set colorcolumn=72,80    " Show width boundary.
-highlight ColorColumn ctermbg=1
+highlight ColorColumn ctermbg=blue
 
 set hlsearch             " Highlight search term matches.
 set showmatch            " Show matching bracket.
@@ -22,8 +22,8 @@ set sidescrolloff=10     " Keep at least N lines left/right of cursor.
 
 set list                             " Show whitespace.
 set listchars=tab:>-,trail:~         " Whitespace display modifications.
-highlight NonText ctermfg=1 ctermbg=none
-highlight SpecialKey ctermfg=1 ctermbg=none
+highlight NonText ctermfg=blue ctermbg=none
+highlight SpecialKey ctermfg=blue ctermbg=none
 
 " File tab-completion modifications.
 set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
