@@ -33,6 +33,7 @@ autocmd BufRead,BufNewFile *.c      set filetype=c
 autocmd BufRead,BufNewFile *.h      set filetype=c
 autocmd BufRead,BufNewFile *.cpp    set filetype=cpp
 autocmd BufRead,BufNewFile *.hpp    set filetype=cpp
+autocmd BufRead,BufNewFile *.inc    set filetype=cpp
 autocmd BufRead,BufNewFile *.rs     set filetype=rust
 autocmd BufRead,BufNewFile *.txt    set filetype=text
 autocmd BufRead,BufNewFile *.md     set filetype=text
