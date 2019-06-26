@@ -16,7 +16,7 @@ set showmatch            " Show matching bracket.
 
 set ruler                " Show line/column.
 set showcmd              " Show partial commands at bottom.
-set cursorline           " Highlight current line.
+"set cursorline           " Highlight current line.
 set scrolloff=10         " Keep at least N lines above/below cursor.
 set sidescrolloff=10     " Keep at least N lines left/right of cursor.
 
