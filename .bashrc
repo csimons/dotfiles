@@ -275,15 +275,18 @@ site() {
 
     if [ $# -eq 0 ]
     then
-        ssh $NFSN_USER@$NFSN_HOST
+        ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no \
+            $NFSN_USER@$NFSN_HOST
     elif [ $# -eq 2 ]
     then
         if [ "$1" == "up" ]
         then
-            scp $2 $NFSN_USER@$NFSN_HOST:~/
+            scp -o PreferredAuthentications=password -o PubkeyAuthentication=no \
+                $2 $NFSN_USER@$NFSN_HOST:~/
         elif [ "$1" == "down" ]
         then
-            scp $NFSN_USER@$NFSN_HOST:~/$2 .
+            scp -o PreferredAuthentications=password -o PubkeyAuthentication=no \
+                $NFSN_USER@$NFSN_HOST:~/$2 .
         else
             >&2 echo 'usage: site [ ( up | down ) FILE ]'
             return 1
