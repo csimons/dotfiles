@@ -3,6 +3,10 @@
 --exclude=target
 --exclude=bindata.go
 --exclude=*.bundle.js
+--exclude=build
+--exclude=build-darwin
+--exclude=build-linux
+--exclude=docker-include
 
 --langdef=go
 --langmap=go:.go
