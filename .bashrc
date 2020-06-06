@@ -237,6 +237,14 @@ lsdiff() {
     rm $b
 }
 
+monitor() {
+    while true
+    do
+        bash -c "$*"
+        sleep 2
+    done
+}
+
 motd() {
     cat ~/.motd
 }
