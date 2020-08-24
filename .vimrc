@@ -42,6 +42,7 @@ autocmd BufRead,BufNewFile *.java         set filetype=java
 autocmd BufRead,BufNewFile *.js           set filetype=javascript
 autocmd BufRead,BufNewFile *.json         set filetype=json
 autocmd BufRead,BufNewFile *.log          set filetype=log
+autocmd BufRead,BufNewFile *.nomad        set filetype=nomad
 autocmd BufRead,BufNewFile *.pkb          set filetype=sql
 autocmd BufRead,BufNewFile *.prc          set filetype=sql
 autocmd BufRead,BufNewFile *.py           set filetype=python
@@ -79,6 +80,7 @@ autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab number
 autocmd FileType json       set tabstop=4 softtabstop=4 expandtab
                             \ colorcolumn=0 textwidth=0
 autocmd FileType log        set tabstop=4 softtabstop=4 expandtab number
+autocmd FileType nomad      set tabstop=2 softtabstop=2 expandtab number
 autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
 autocmd FileType php        set tabstop=4 softtabstop=4 expandtab number
 autocmd FileType python     set tabstop=4 softtabstop=4 expandtab number
