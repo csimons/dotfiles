@@ -13,6 +13,10 @@
 --regex-go=/(const|type|var)[ \t]*([a-zA-Z0-9_]+)/\2/d,definition/
 --regex-go=/func([ \t]+\([^)]+\))?[ \t]+([a-zA-Z0-9_]+)/\2/d,func/
 
+--langmap=php:.php
+--langmap=php:+.inc
+--regex-php=/function([ \t]+\([^)]+\))?[ \t]+([a-zA-Z0-9_]+)/\2/d,func/
+
 --langdef=js
 --langmap=js:.js
 --langmap=js:+.jsx
