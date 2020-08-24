@@ -1,9 +1,3 @@
-" Christopher L. Simons
-
-" ######################################################################
-" # CONFIGURATION
-" ######################################################################
-
 set fileencodings=utf-8
 
 syntax on                " Syntax highlighting.
@@ -105,16 +99,8 @@ autocmd FileType vim        set tabstop=4 softtabstop=4 expandtab
 autocmd FileType xml        set tabstop=4 softtabstop=4 noexpandtab
 autocmd FileType yaml       set tabstop=2 softtabstop=2 expandtab
 
-" ######################################################################
-" # KEY MAPPINGS
-" ######################################################################
-
 map <C-g> :vimgrep <cword>    % <bar> :cw <Enter>
 map <C-h> :vimgrep <cword> **/* <bar> :cw <Enter>
-
-" ######################################################################
-" # PROJECT OVERRIDE CAPABILITY
-" ######################################################################
 
 if filereadable(".local.vimrc")
     source .local.vimrc
