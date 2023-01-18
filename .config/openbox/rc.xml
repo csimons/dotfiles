@@ -1,45 +1,141 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<openbox_config
-	xmlns="http://openbox.org/3.4/rc"
-	xmlns:xi="http://www.w3.org/2001/XInclude">
-
-<keyboard>
-	<keybind key="A-space">
-		<action name="ShowMenu"><menu>client-menu</menu></action>
-	</keybind>
-
-	<keybind key="A-S-q">
-		<action name="Exit">
-			<prompt>no</prompt>
-		</action>
-	</keybind>
-
-	<keybind key="A-S-t">
-		<action name="Execute">
-			<command>st</command>
-		</action>
-	</keybind>
-
-	<keybind key="A-S-w">
-		<action name="Execute">
-			<command>google-chrome</command>
-		</action>
-	</keybind>
-
-	<keybind key="A-Tab">
-		<action name="NextWindow" />
-	</keybind>
-
-	<keybind key="A-S-Tab">
-		<action name="PreviousWindow" />
-	</keybind>
-</keyboard>
-
-<applications>
-	<application class="*">
-		<decor>no</decor>
-	</application>
-</applications>
-
+<openbox_config xmlns="http://openbox.org/3.4/rc" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <keyboard>
+    <keybind key="A-space">
+      <action name="ShowMenu">
+        <menu>client-menu</menu>
+      </action>
+    </keybind>
+    <keybind key="A-S-q">
+      <action name="Exit">
+        <prompt>yes</prompt>
+      </action>
+    </keybind>
+    <keybind key="A-S-l">
+      <action name="Execute">
+        <command>dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-t">
+      <action name="Execute">
+        <command>/home/csimons/src/st/st</command>
+      </action>
+    </keybind>
+    <keybind key="A-S-w">
+      <action name="Execute">
+        <command>google-chrome</command>
+      </action>
+    </keybind>
+    <keybind key="A-Tab">
+      <action name="NextWindow"/>
+    </keybind>
+    <keybind key="A-S-Tab">
+      <action name="PreviousWindow"/>
+    </keybind>
+  </keyboard>
+  <applications>
+    <application class="*">
+      <decor>no</decor>
+    </application>
+  </applications>
+  <theme>
+    <keepBorder>yes</keepBorder>
+    <animateIconify>yes</animateIconify>
+    <titleLayout>NLIMC</titleLayout>
+    <font place="ActiveWindow">
+      <name>Sans</name>
+      <size>14</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="InactiveWindow">
+      <name>Sans</name>
+      <size>14</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="MenuHeader">
+      <name>Sans</name>
+      <size>14</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="MenuItem">
+      <name>Sans</name>
+      <size>14</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="ActiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>14</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <font place="InactiveOnScreenDisplay">
+      <name>Sans</name>
+      <size>14</size>
+      <weight>Normal</weight>
+      <slant>Normal</slant>
+    </font>
+    <name>Nightmare-01</name>
+  </theme>
+  <focus>
+    <focusNew>yes</focusNew>
+    <followMouse>no</followMouse>
+    <focusDelay>0</focusDelay>
+    <raiseOnFocus>no</raiseOnFocus>
+    <focusLast>yes</focusLast>
+    <underMouse>no</underMouse>
+  </focus>
+  <placement>
+    <policy>Smart</policy>
+    <monitor>Any</monitor>
+    <primaryMonitor/>
+  </placement>
+  <resize>
+    <drawContents>yes</drawContents>
+    <popupShow>NonPixel</popupShow>
+    <popupPosition>Center</popupPosition>
+    <popupFixedPosition>
+      <x>0</x>
+      <y>0</y>
+    </popupFixedPosition>
+  </resize>
+  <resistance>
+    <strength>10</strength>
+    <screen_edge_strength>20</screen_edge_strength>
+  </resistance>
+  <mouse>
+    <dragThreshold>8</dragThreshold>
+    <screenEdgeWarpTime>400</screenEdgeWarpTime>
+    <doubleClickTime>200</doubleClickTime>
+    <context name="Titlebar">
+      <mousebind button="Left" action="DoubleClick"/>
+    </context>
+  </mouse>
+  <desktops>
+    <number>1</number>
+    <names>
+      <name>main</name>
+    </names>
+    <popupTime>875</popupTime>
+  </desktops>
+  <margins>
+    <left>0</left>
+    <right>0</right>
+    <top>0</top>
+    <bottom>0</bottom>
+  </margins>
+  <dock>
+    <position>TopLeft</position>
+    <floatingX>0</floatingX>
+    <floatingY>0</floatingY>
+    <stacking>Above</stacking>
+    <direction>Vertical</direction>
+    <noStrut>no</noStrut>
+    <autoHide>no</autoHide>
+    <hideDelay>300</hideDelay>
+    <showDelay>300</showDelay>
+  </dock>
 </openbox_config>
