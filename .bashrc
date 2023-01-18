@@ -88,43 +88,6 @@ fi
 ' --tag-name-filter cat -- --branches --tags
 }
 
-jarfind() {
-    if [ "$#" -ne 1 ]
-    then
-        >&2 echo 'usage: jar-find filename'
-        return 1
-    fi
-
-    local target=$1
-    for filename in $(find . -type f -name '*.jar')
-    do
-        for hit in $(jar tf $filename | grep $target)
-        do
-            echo "$filename: $hit"
-        done
-    done
-}
-
-lclean() {
-    rm -f \
-        *-blx.bib \
-        *.aux \
-        *.bbl \
-        *.bcf \
-        *.blg \
-        *.dvi \
-        *.fdb_latexmk \
-        *.fls \
-        *.log \
-        *.etd \
-        *.doc \
-        *.out \
-        *.pdf \
-        *.ps \
-        *.run.xml \
-        *.tex.blg
-}
-
 libfind() {
     if [ $# -ne 2 ]
     then
@@ -143,36 +106,6 @@ libfind() {
             echo $candidate
         fi
     done
-}
-
-lmake() {
-    if [ $# -ne 1 ]
-    then
-        >&2 echo "usage: $0 TEX_FILE"
-        return 1
-    elif [ -z "$PDF_VIEWER" ]
-    then
-        >&2 echo '$PDF_VIEWER must be set to open PDFs'
-        return 1
-    else
-        local rawName=${1%\.*}
-        lclean
-
-        pdflatex $rawName.tex
-        local rc=$?
-
-        if [ -f $rawName.bcf ]
-        then
-            biber $rawName
-            pdflatex $rawName.tex
-            local rc=$((rc + $?))
-        fi
-
-        if [ $rc -eq 0 ]
-        then
-            $PDF_VIEWER $rawName.pdf &
-        fi
-    fi
 }
 
 lsdiff() {
@@ -245,10 +178,6 @@ monitor() {
     done
 }
 
-motd() {
-    cat ~/.motd
-}
-
 mvn() {
     if [ $# -lt 1 ]
     then
@@ -266,50 +195,6 @@ mvn() {
         echo "no wrapper found; executing: ${MAVEN_HOME}/bin/mvn $*"
         $MAVEN_HOME/bin/mvn $*
     fi
-}
-
-site() {
-    if [ -z "$NFSN_USER" ]
-    then
-        >&2 echo '$NFSN_USER is not set'
-        return 1
-    fi
-
-    if [ -z "$NFSN_HOST" ]
-    then
-        >&2 echo '$NFSN_HOST is not set'
-        return 1
-    fi
-
-    if [ $# -eq 0 ]
-    then
-        ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no \
-            $NFSN_USER@$NFSN_HOST
-    elif [ $# -eq 2 ]
-    then
-        if [ "$1" == "up" ]
-        then
-            scp -o PreferredAuthentications=password -o PubkeyAuthentication=no \
-                $2 $NFSN_USER@$NFSN_HOST:~/
-        elif [ "$1" == "down" ]
-        then
-            scp -o PreferredAuthentications=password -o PubkeyAuthentication=no \
-                $NFSN_USER@$NFSN_HOST:~/$2 .
-        else
-            >&2 echo 'usage: site [ ( up | down ) FILE ]'
-            return 1
-        fi
-    else
-        >&2 echo 'usage: site [ ( up | down ) FILE ]'
-        return 1
-    fi
-}
-
-sloc() {
-    #
-    # TODO: fix for directories with whitespace in their names
-    #
-    echo $(cat $(find . -type f | egrep -v '(\.git|\.svn|target| |jpg|gif|png|ttf|woff|eot)') | wc -l)
 }
 
 sloc-dir() {
