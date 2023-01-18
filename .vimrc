@@ -66,40 +66,27 @@ autocmd BufRead,BufNewFile Plan           set filetype=text
 autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile README.txt     set filetype=readme
 
-autocmd FileType c          set tabstop=8 softtabstop=8 noexpandtab number
-autocmd FileType cpp        set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType dockerfile set tabstop=4 softtabstop=4 expandtab
-autocmd FileType eruby      set tabstop=2 softtabstop=2 expandtab
-autocmd FileType gitcommit  set tabstop=4 softtabstop=4 expandtab
-                            \ textwidth=71 colorcolumn=50,72
-autocmd FileType go         set tabstop=8 softtabstop=8 noexpandtab number
-autocmd FileType html       set tabstop=4 noexpandtab number nowrap
-autocmd FileType java       set tabstop=4 softtabstop=4 noexpandtab number
-autocmd FileType javascript set tabstop=2 softtabstop=2 expandtab number
+set number
+set textwidth=71
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+autocmd FileType c          set ts=8 sts=8 noexpandtab number
+autocmd FileType go         set ts=8 sts=8 noexpandtab number
+autocmd FileType gitcommit  set textwidth=71 colorcolumn=50,72
+
+autocmd FileType html       set nowrap
+autocmd FileType java       set noexpandtab
+
+autocmd FileType javascript set ts=2 sts=2 expandtab number
                             \ wildignore+=node_modules/**
-autocmd FileType json       set tabstop=4 softtabstop=4 expandtab
-                            \ colorcolumn=0 textwidth=0
-autocmd FileType log        set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType nomad      set tabstop=2 softtabstop=2 expandtab number
-autocmd FileType ora        set tabstop=2 softtabstop=2 expandtab
-autocmd FileType php        set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType python     set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType readme     set tabstop=4 softtabstop=4 expandtab
-autocmd FileType roff       set tabstop=4 softtabstop=4 expandtab textwidth=71
-autocmd FileType ruby       set tabstop=2 softtabstop=2 expandtab
-autocmd FileType rust       set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType sh         set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType sql        set tabstop=4 softtabstop=4 expandtab number
-autocmd FileType table      set tabstop=4 softtabstop=4 expandtab
-                            \ textwidth=0 colorcolumn=0
-autocmd FileType tex        set textwidth=71 " Wrap after N characters.
-autocmd FileType text       set tabstop=4 softtabstop=4 expandtab textwidth=71
-autocmd FileType todo       set tabstop=4 softtabstop=4 expandtab textwidth=71
-autocmd FileType typescript set tabstop=4 softtabstop=4 expandtab number
+autocmd FileType typescript set ts=4 sts=4 expandtab number
                             \ wildignore+=node_modules/**
-autocmd FileType vim        set tabstop=4 softtabstop=4 expandtab
-autocmd FileType xml        set tabstop=4 softtabstop=4 noexpandtab
-autocmd FileType yaml       set tabstop=2 softtabstop=2 expandtab
+
+autocmd FileType eruby      set ts=2 sts=2 expandtab
+autocmd FileType nomad      set ts=2 sts=2 expandtab
+autocmd FileType ruby       set ts=2 sts=2 expandtab
+autocmd FileType tex        set ts=2 sts=2 expandtab
+autocmd FileType yaml       set ts=2 sts=2 expandtab
 
 map <C-g> :vimgrep <cword>    % <bar> :cw <Enter>
 map <C-h> :vimgrep <cword> **/* <bar> :cw <Enter>
