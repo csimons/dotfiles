@@ -3,7 +3,9 @@ set fileencodings=utf-8
 syntax on                " Syntax highlighting.
 set autoindent           " Auto-indent upon opening new line.
 set colorcolumn=72,80    " Show width boundary.
+
 highlight ColorColumn ctermbg=gray
+highlight Visual term=reverse cterm=reverse
 
 set hlsearch             " Highlight search term matches.
 set showmatch            " Show matching bracket.
