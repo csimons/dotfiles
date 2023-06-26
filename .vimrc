@@ -69,7 +69,7 @@ autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile README.txt     set filetype=readme
 
 set number
-set textwidth=71
+set textwidth=79
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
 autocmd FileType c          set ts=8 sts=8 noexpandtab number
