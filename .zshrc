@@ -12,6 +12,8 @@ unsetopt menucomplete
 
 #export PS1='%1d %# '
 export PS1='%~ %# '
+export EDITOR=vim
+export GIT_EDITOR=$EDITOR
 
 todo() {
     vim $HOME/.todo
