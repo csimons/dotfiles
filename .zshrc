@@ -14,6 +14,7 @@ unsetopt menucomplete
 export PS1='%~ %# '
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
+export FORCE_COLOR=1
 
 todo() {
     vim $HOME/.todo
