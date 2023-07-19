@@ -12,6 +12,7 @@ unsetopt menucomplete
 
 #export PS1='%1d %# '
 export PS1='%~ %# '
+export TERM=xterm
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
