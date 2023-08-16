@@ -68,6 +68,9 @@ autocmd BufRead,BufNewFile Plan           set filetype=text
 autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile README.txt     set filetype=readme
 
+autocmd BufRead,BufNewFile Makefile       set filetype=makefile
+autocmd BufRead,BufNewFile makefile       set filetype=makefile
+
 set number
 set textwidth=79
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
@@ -75,6 +78,8 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 autocmd FileType c          set ts=8 sts=8 noexpandtab number
 autocmd FileType go         set ts=8 sts=8 noexpandtab number
 autocmd FileType gitcommit  set textwidth=71 colorcolumn=50,72
+
+autocmd FileType makefile   set ts=8 sts=8 noexpandtab number
 
 autocmd FileType html       set nowrap
 autocmd FileType java       set noexpandtab
