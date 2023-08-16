@@ -92,7 +92,7 @@ autocmd FileType typescript set ts=4 sts=4 expandtab number
 autocmd FileType eruby      set ts=2 sts=2 expandtab
 autocmd FileType nomad      set ts=2 sts=2 expandtab
 autocmd FileType ruby       set ts=2 sts=2 expandtab
-autocmd FileType tex        set ts=2 sts=2 expandtab
+autocmd FileType tex        set ts=4 sts=4 expandtab
 autocmd FileType yaml       set ts=2 sts=2 expandtab
 
 map <C-g> :vimgrep <cword>    % <bar> :cw <Enter>
