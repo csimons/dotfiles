@@ -82,7 +82,7 @@ autocmd FileType gitcommit  set textwidth=71 colorcolumn=50,72
 autocmd FileType makefile   set ts=8 sts=8 noexpandtab number
 
 autocmd FileType html       set nowrap
-autocmd FileType java       set noexpandtab
+autocmd FileType java       set ts=4 sts=4 expandtab number
 
 autocmd FileType javascript set ts=2 sts=2 expandtab number
                             \ wildignore+=node_modules/**
