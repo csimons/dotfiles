@@ -64,6 +64,7 @@ autocmd BufRead,BufNewFile .plan          set filetype=text
 autocmd BufRead,BufNewFile .todo          set filetype=todo
 autocmd BufRead,BufNewFile COMMIT_EDITMSG set filetype=gitcommit
 autocmd BufRead,BufNewFile Dockerfile     set filetype=dockerfile
+autocmd BufRead,BufNewFile Makefile       set filetype=makefile
 autocmd BufRead,BufNewFile Plan           set filetype=text
 autocmd BufRead,BufNewFile README         set filetype=text
 autocmd BufRead,BufNewFile README.txt     set filetype=readme
@@ -74,6 +75,8 @@ autocmd BufRead,BufNewFile makefile       set filetype=makefile
 set number
 set textwidth=79
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+autocmd FileType makefile   set textwidth=71 ts=4 noexpandtab number
 
 autocmd FileType c          set ts=8 sts=8 noexpandtab number
 autocmd FileType go         set ts=8 sts=8 noexpandtab number
