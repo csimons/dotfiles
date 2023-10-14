@@ -105,9 +105,10 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     call plug#end()
 
     " One-time setup:
-    " :PlugInstall
-    " :CocInstall coc-pyright
-    " :CocInstall coc-rust-analyzer
+    " sh    $ rustup component add rust-analyzer
+    " vim   :PlugInstall
+    " vim   :CocInstall coc-pyright
+    " vim   :CocInstall coc-rust-analyzer
 endif
 
 if filereadable(".local.vimrc")
