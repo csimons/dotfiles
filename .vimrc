@@ -98,6 +98,18 @@ autocmd FileType yaml       set ts=2 sts=2 expandtab
 map <C-g> :vimgrep <cword>    % <bar> :cw <Enter>
 map <C-h> :vimgrep <cword> **/* <bar> :cw <Enter>
 
+" Requires vim-plug, Node.js:
+if filereadable(expand("~/.vim/autoload/plug.vim"))
+    call plug#begin('~/.vim/plugged')
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    call plug#end()
+
+    " One-time setup:
+    " :PlugInstall
+    " :CocInstall coc-pyright
+    " :CocInstall coc-rust-analyzer
+endif
+
 if filereadable(".local.vimrc")
     source .local.vimrc
 endif
