@@ -74,7 +74,7 @@ git-author-rewrite() {
         return 1
     fi
 
-    git filter-branch --env-filter '
+    git filter-branch -f --env-filter '
 if [ "$GIT_COMMITTER_EMAIL" = "$OLD_EMAIL" ]
 then
     export GIT_COMMITTER_NAME="$NEW_NAME"
