@@ -17,6 +17,22 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 
+timer() {
+    if [ $# -ne 0 ]
+    then
+        >&2 echo 'usage: timer'
+        return 1
+    fi
+
+    local n=0
+    while [ 1 -eq 1 ]
+    do
+        echo $n
+        local n=$((n + 1))
+        sleep 1
+    done
+}
+
 todo() {
     vim $HOME/.todo
 }
