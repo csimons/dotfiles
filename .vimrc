@@ -110,8 +110,11 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     " One-time setup:
     " sh    $ rustup component add rust-analyzer
     " vim   :PlugInstall
+    " vim   :CocInstall coc-json
     " vim   :CocInstall coc-pyright
     " vim   :CocInstall coc-rust-analyzer
+
+    source $HOME/.coc.vimrc
 endif
 
 if filereadable(".local.vimrc")
