@@ -10,6 +10,11 @@ unsetopt autolist
 unsetopt menucomplete
 #setopt noautomenu
 
+bindkey "^F" forward-word
+bindkey "^W" forward-word
+bindkey "^B" backward-word
+bindkey "^U" backward-kill-line
+
 #export PS1='%1d %# '
 export PS1='%~ %# '
 export EDITOR=vim
