@@ -21,6 +21,16 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 
+gdiff() {
+    if [ $# -ne 2 ]
+    then
+        >&2 echo 'usage: gdiff BASE_FILE OTHER_FILE'
+        return 1
+    fi
+
+    diff -u --color=always $1 $2
+}
+
 timer() {
     if [ $# -ne 0 ]
     then
