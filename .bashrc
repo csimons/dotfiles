@@ -39,11 +39,11 @@ dirsloc() {
 gdiff() {
     if [ $# -ne 2 ]
     then
-        >&2 echo 'usage: gdiff fileA fileB'
+        >&2 echo 'usage: gdiff BASE_FILE OTHER_FILE'
         return 1
     fi
 
-    git diff --no-index --ignore-space-at-eol -- $1 $2
+    diff -u --color=always $1 $2
 }
 
 git-author-rewrite() {
