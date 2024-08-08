@@ -31,6 +31,7 @@ autocmd BufRead,BufNewFile *.buf          set filetype=sql
 autocmd BufRead,BufNewFile *.c            set filetype=c
 autocmd BufRead,BufNewFile *.cpp          set filetype=cpp
 autocmd BufRead,BufNewFile *.erb          set filetype=eruby
+autocmd BufRead,BufNewFile *.feature      set filetype=feature
 autocmd BufRead,BufNewFile *.fn           set filetype=sql
 autocmd BufRead,BufNewFile *.fnc          set filetype=sql
 autocmd BufRead,BufNewFile *.ftl          set filetype=html
@@ -90,6 +91,7 @@ autocmd FileType text       set textwidth=71 ts=4 sts=4 expandtab number
 autocmd FileType typescript set ts=4 sts=4 expandtab number
                             \ wildignore+=node_modules/**
 autocmd FileType eruby      set ts=2 sts=2 expandtab
+autocmd FileType feature    set ts=2 sts=2 expandtab
 autocmd FileType nomad      set ts=2 sts=2 expandtab
 autocmd FileType ruby       set ts=2 sts=2 expandtab
 autocmd FileType tex        set ts=4 sts=4 expandtab
