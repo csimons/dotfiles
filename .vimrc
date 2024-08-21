@@ -19,7 +19,7 @@ set sidescrolloff=10     " Keep at least N lines left/right of cursor.
 set list                             " Show whitespace.
 set listchars=tab:>-,trail:~         " Whitespace display modifications.
 highlight NonText ctermfg=gray ctermbg=none
-highlight SpecialKey ctermfg=cyan ctermbg=none
+highlight SpecialKey ctermfg=red ctermbg=none
 
 " File tab-completion modifications.
 set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
