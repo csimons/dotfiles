@@ -18,11 +18,16 @@ set sidescrolloff=10     " Keep at least N lines left/right of cursor.
 
 set list                             " Show whitespace.
 set listchars=tab:>-,trail:~         " Whitespace display modifications.
-highlight NonText ctermfg=gray ctermbg=none
+highlight NonText ctermfg=red ctermbg=none
 highlight SpecialKey ctermfg=darkgray ctermbg=none
 
-" File tab-completion modifications.
-set wildignore=.git,.svn,**/target/*,tags,**/*.zip,**/*.jar
+" File exclusions for tab-completion and search:
+set wildignore=**/target/*
+set wildignore+=*.jar
+set wildignore+=*.zip
+set wildignore+=.git
+set wildignore+=.svn
+set wildignore+=tags
 
 autocmd BufRead,BufNewFile *.1            set filetype=roff
 autocmd BufRead,BufNewFile *.bash         set filetype=sh
@@ -102,9 +107,9 @@ map <C-h> :vimgrep <cword> **/* <bar> :cw <Enter>
 
 " Requires vim-plug, Node.js:
 if filereadable(expand("~/.vim/autoload/plug.vim"))
-    call plug#begin('~/.vim/plugged')
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    call plug#end()
+    "call plug#begin('~/.vim/plugged')
+    "Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    "call plug#end()
 
     " One-time setup:
     " sh    $ rustup component add rust-analyzer
@@ -113,7 +118,7 @@ if filereadable(expand("~/.vim/autoload/plug.vim"))
     " vim   :CocInstall coc-pyright
     " vim   :CocInstall coc-rust-analyzer
 
-    source $HOME/.coc.vimrc
+    "source $HOME/.coc.vimrc
 endif
 
 if filereadable(".local.vimrc")
