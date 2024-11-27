@@ -24,6 +24,7 @@ highlight SpecialKey ctermfg=darkgray ctermbg=none
 " File exclusions for tab-completion and search:
 set wildignore=**/target/*
 set wildignore+=*.jar
+set wildignore+=*.pyc
 set wildignore+=*.zip
 set wildignore+=.git
 set wildignore+=.svn
