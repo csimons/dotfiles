@@ -22,7 +22,9 @@ highlight NonText ctermfg=red ctermbg=none
 highlight SpecialKey ctermfg=darkgray ctermbg=none
 
 " File exclusions for tab-completion and search:
-set wildignore=**/target/*
+set wildignore=
+set wildignore+=**/node_modules/*
+set wildignore+=**/target/*
 set wildignore+=*.jar
 set wildignore+=*.pyc
 set wildignore+=*.zip
@@ -92,10 +94,8 @@ autocmd FileType makefile   set ts=8 sts=8 noexpandtab number
 autocmd FileType html       set nowrap
 autocmd FileType java       set ts=4 sts=4 expandtab number
 autocmd FileType javascript set ts=2 sts=2 expandtab number
-                            \ wildignore+=node_modules/**
 autocmd FileType text       set textwidth=71 ts=4 sts=4 expandtab number
 autocmd FileType typescript set ts=4 sts=4 expandtab number
-                            \ wildignore+=node_modules/**
 autocmd FileType eruby      set ts=2 sts=2 expandtab
 autocmd FileType feature    set ts=2 sts=2 expandtab
 autocmd FileType nomad      set ts=2 sts=2 expandtab
