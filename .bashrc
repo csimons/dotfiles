@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-export PS1='\w\$ '
+export PS1='\w \$ '
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
