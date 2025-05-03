@@ -10,3 +10,6 @@ size = 16
 [colors.primary]
 foreground = "#ffffff"
 background = "#000000"
+
+[selection]
+save_to_clipboard = true
