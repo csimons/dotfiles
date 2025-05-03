@@ -1,0 +1,12 @@
+[window]
+dimensions = { columns = 120, lines = 36 }
+opacity = 0.8
+decorations = "Full"
+
+[font]
+normal = { family = "GohuFont 14 Nerd Font", style = "Regular" }
+size = 16
+
+[colors.primary]
+foreground = "#ffffff"
+background = "#000000"
