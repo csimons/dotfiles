@@ -11,6 +11,10 @@ size = 16
 foreground = "#ffffff"
 background = "#000000"
 
+[colors.cursor]
+text = "#ffffff"
+cursor = "#ff0000"
+
 [selection]
 save_to_clipboard = true
 
