@@ -5,7 +5,7 @@ decorations = "Full"
 
 [font]
 normal = { family = "GohuFont 14 Nerd Font", style = "Regular" }
-size = 14
+size = 16
 
 [colors.primary]
 foreground = "#ffffff"
