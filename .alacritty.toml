@@ -17,4 +17,6 @@ save_to_clipboard = true
 [keyboard]
 bindings = [
     { key = "Up", mods = "Command", action = "ToggleMaximized" },
+    { key = "Left", mods = "Alt", chars = "\u001BB" },
+    { key = "Right", mods = "Alt", chars = "\u001BF" },
 ]
