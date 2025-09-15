@@ -8,12 +8,12 @@ normal = { family = "GohuFont 14 Nerd Font", style = "Regular" }
 size = 16
 
 [colors.primary]
-foreground = "#ffffff"
+foreground = "#FFFFFF"
 background = "#000000"
 
 [colors.cursor]
 text = "#ffffff"
-cursor = "#ff0000"
+cursor = "#0060FF"
 
 [selection]
 save_to_clipboard = true
