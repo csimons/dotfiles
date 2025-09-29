@@ -1,6 +1,6 @@
 [window]
 dimensions = { columns = 120, lines = 36 }
-opacity = 0.8
+opacity = 0.9
 decorations = "Full"
 
 [font]
