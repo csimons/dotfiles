@@ -6,6 +6,7 @@ export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 export PATH=~/bin:$PATH
 
+alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
 
 countdown() {
@@ -34,16 +35,6 @@ dirsloc() {
             cd - >/dev/null
         fi
     done
-}
-
-gdiff() {
-    if [ $# -ne 2 ]
-    then
-        >&2 echo 'usage: gdiff BASE_FILE OTHER_FILE'
-        return 1
-    fi
-
-    diff -u --color=always $1 $2
 }
 
 libfind() {

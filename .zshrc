@@ -21,6 +21,8 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 
+alias gdiff='diff -u --color=always'
+
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000000
 SAVEHIST=1000000
@@ -35,16 +37,6 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-
-gdiff() {
-    if [ $# -ne 2 ]
-    then
-        >&2 echo 'usage: gdiff BASE_FILE OTHER_FILE'
-        return 1
-    fi
-
-    diff -u --color=always $1 $2
-}
 
 timer() {
     if [ $# -ne 0 ]
