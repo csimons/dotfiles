@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+msg='usage: lsdiff DIR1 DIR2'
+
+if [ "$#" == '2' ]
+then
+    dirA="$1"
+    dirB="$2"
+else
+    >&2 echo $msg
+    exit 1
+fi
+
+if [ ! -d "$dirA" ] || [ ! -d "$dirB" ]
+then
+    >&2 echo $msg
+    exit 1
+fi
+
+a=$(mktemp)
+b=$(mktemp)
+
+cd "$dirA"; find . -type f | sort > $a; cd -
+cd "$dirB"; find . -type f | sort > $b; cd -
+
+diff -u --color=always $a $b
+
+rm $a $b
