@@ -85,24 +85,18 @@ set number
 set textwidth=0
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
-autocmd FileType makefile   set textwidth=71 ts=4 noexpandtab number
-
-autocmd FileType c          set ts=8 sts=8 noexpandtab number
-autocmd FileType go         set ts=8 sts=8 noexpandtab number
 autocmd FileType gitcommit  set textwidth=71 colorcolumn=50,72
-autocmd FileType makefile   set ts=8 sts=8 noexpandtab number
-autocmd FileType html       set nowrap
-autocmd FileType java       set ts=4 sts=4 expandtab number
-autocmd FileType javascript set ts=2 sts=2 expandtab number
-autocmd FileType text       set ts=4 sts=4 expandtab number
-autocmd FileType todo       set ts=4 sts=4 expandtab number
-autocmd FileType typescript set ts=4 sts=4 expandtab number
-autocmd FileType eruby      set ts=2 sts=2 expandtab
-autocmd FileType feature    set ts=2 sts=2 expandtab
-autocmd FileType nomad      set ts=2 sts=2 expandtab
-autocmd FileType ruby       set ts=2 sts=2 expandtab
-autocmd FileType tex        set ts=4 sts=4 expandtab
-autocmd FileType yaml       set ts=2 sts=2 expandtab
+
+autocmd FileType c          set ts=8 sts=8 noexpandtab
+autocmd FileType go         set ts=8 sts=8 noexpandtab
+autocmd FileType makefile   set ts=8 sts=8 noexpandtab
+
+autocmd FileType javascript set ts=2 sts=2
+autocmd FileType eruby      set ts=2 sts=2
+autocmd FileType feature    set ts=2 sts=2
+autocmd FileType nomad      set ts=2 sts=2
+autocmd FileType ruby       set ts=2 sts=2
+autocmd FileType yaml       set ts=2 sts=2
 
 map <C-g> :vimgrep <cword>    % <bar> :cw <Enter>
 map <C-h> :vimgrep <cword> **/* <bar> :cw <Enter>
