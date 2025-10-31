@@ -94,8 +94,8 @@ autocmd FileType makefile   set ts=8 sts=8 noexpandtab number
 autocmd FileType html       set nowrap
 autocmd FileType java       set ts=4 sts=4 expandtab number
 autocmd FileType javascript set ts=2 sts=2 expandtab number
-autocmd FileType text       set textwidth=71 ts=4 sts=4 expandtab number
-autocmd FileType todo       set textwidth=71 ts=4 sts=4 expandtab number
+autocmd FileType text       set ts=4 sts=4 expandtab number
+autocmd FileType todo       set ts=4 sts=4 expandtab number
 autocmd FileType typescript set ts=4 sts=4 expandtab number
 autocmd FileType eruby      set ts=2 sts=2 expandtab
 autocmd FileType feature    set ts=2 sts=2 expandtab
