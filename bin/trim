@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cols=$(stty -f /dev/tty size | cut -d ' ' -f 2)
+
+while IFS='$\n' read -r line
+do
+    echo "$line" | cut -c1-${cols}
+done
