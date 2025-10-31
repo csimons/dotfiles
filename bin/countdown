@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [ $# -ne 1 ]
+then
+    >&2 echo 'usage: countdown SECONDS'
+    exit 1
+fi
+
+n=$1
+while [ $n -gt 0 ]
+do
+    echo $n
+    n=$((n - 1))
+    sleep 1
+done

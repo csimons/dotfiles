@@ -9,22 +9,6 @@ export PATH=~/bin:$PATH
 alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
 
-countdown() {
-    if [ $# -ne 1 ]
-    then
-        >&2 echo 'usage: countdown SECONDS'
-        return 1
-    fi
-
-    local n=$1
-    while [ $n -gt 0 ]
-    do
-        echo $n
-        local n=$((n - 1))
-        sleep 1
-    done
-}
-
 dirsloc() {
     for i in $(ls)
     do
