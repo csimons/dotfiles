@@ -41,14 +41,6 @@ libfind() {
     done
 }
 
-monitor() {
-    while true
-    do
-        bash -c "$*"
-        sleep 2
-    done
-}
-
 mvn() {
     if [ $# -lt 1 ]
     then
