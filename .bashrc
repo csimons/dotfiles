@@ -9,18 +9,6 @@ export PATH="$HOME/.bin:$PATH"
 alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
 
-dirsloc() {
-    for i in $(ls)
-    do
-        if [ -d "$i" ]
-        then
-            cd "$i"
-            echo $(cat $(find . -type f | egrep -v '(\.git|\.svn|target| |jpg|gif|png|ttf|woff|eot)') | wc -l)	$i
-            cd - >/dev/null
-        fi
-    done
-}
-
 libfind() {
     if [ $# -ne 2 ]
     then
@@ -43,76 +31,6 @@ libfind() {
 
 todo() {
     $EDITOR ~/.todo
-}
-
-winjdk-unpack() {
-    if [ "$#" -ne '1' ]
-    then
-        >&2 echo 'usage: winjdk-unpack FILENAME'
-        return 1
-    fi
-
-    if [ ! -f "$1" ]
-    then
-        >&2 echo "file not found: $1"
-        return 1
-    fi
-
-    tmpdir="$1__unpack"
-
-    if [ -d $tmpdir ]
-    then
-        >&2 echo "$tmpdir/ already exists.  Aborting."
-        return 1
-    fi
-
-    mkdir $tmpdir
-    cd $tmpdir
-
-    echo -n "Unpacking CAB ... "
-    cabextract ../$1 > /dev/null 2>&1
-    if [ "$?" -ne '0' ]
-    then
-        echo 'failed.  Aborting.'
-        return 1
-    fi
-    rm COPYRIGHT jaureg jre.exe jucheck jusched src.zip
-    if [ "$?" -ne '0' ]
-    then
-        echo 'failed.  Aborting.'
-        return 1
-    fi
-    echo "ok."
-
-    echo -n "Unpacking JDK tools ... "
-    unzip tools.zip > /dev/null 2>&1
-    if [ "$?" -ne '0' ]
-    then
-        echo 'failed.  Aborting.'
-        return 1
-    fi
-    rm tools.zip
-    if [ "$?" -ne '0' ]
-    then
-        echo 'failed.  Aborting.'
-        return 1
-    fi
-    echo "ok."
-
-    echo -n "Unpacking JDK pack files ... "
-    for packfile in $(find . -type f -name '*.pack')
-    do
-        base=${packfile%\.*};
-        ./jre/bin/unpack200.exe "$base.pack" "$base.jar"
-        if [ "$?" -ne '0' ]
-        then
-            echo 'failed.  Aborting.'
-            return 1
-        fi
-    done
-    echo "ok."
-
-    cd ..
 }
 
 if [ -f ~/.motd ]
