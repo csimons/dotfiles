@@ -1,10 +1,20 @@
 #!/usr/bin/env zsh
 
+#export PS1='%1d %# '
+export PS1='%~ %# '
+export EDITOR=vim
+export GIT_EDITOR=$EDITOR
+export FORCE_COLOR=1
+
+alias gdiff='diff -u --color=always'
+alias lynx='lynx -accept_all_cookies'
+
+########## BEGIN: MAKE ZSH MORE LIKE BASH
+
 bindkey -e # Enable control-A/E etc. when EDITOR set to vim.
 bindkey "^[[3~" delete-char # Fix delete key.
 setopt interactivecomments # Allow comments in interactive shell.
 
-# Make zsh tab-completion behave more like bash.
 #setopt autolist
 unsetopt autolist
 unsetopt menucomplete
@@ -15,13 +25,7 @@ bindkey "^W" forward-word
 bindkey "^B" backward-word
 bindkey "^U" backward-kill-line
 
-#export PS1='%1d %# '
-export PS1='%~ %# '
-export EDITOR=vim
-export GIT_EDITOR=$EDITOR
-export FORCE_COLOR=1
-
-alias gdiff='diff -u --color=always'
+########## END: MAKE ZSH MORE LIKE BASH
 
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=1000000
