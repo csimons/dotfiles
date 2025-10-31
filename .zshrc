@@ -5,6 +5,7 @@ export PS1='%~ %# '
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
+export PATH="$HOME/.bin:$PATH"
 
 alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
