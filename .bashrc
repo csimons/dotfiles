@@ -41,41 +41,6 @@ libfind() {
     done
 }
 
-mvn() {
-    if [ $# -lt 1 ]
-    then
-        >&2 echo "usage: mvn <args>"
-        return 1
-    elif [ -z "$MAVEN_HOME" ]
-    then
-        >&2 echo '$MAVEN_HOME is not set'
-        return 1
-    elif [ -f './mvnw' ]
-    then
-        echo "changing command to the following: ./mvnw $*"
-        ./mvnw $*
-    else
-        echo "no wrapper found; executing: ${MAVEN_HOME}/bin/mvn $*"
-        $MAVEN_HOME/bin/mvn $*
-    fi
-}
-
-sloc-dir() {
-    for i in $(ls --color=no | sort)
-    do
-        if [ -d "$i" ]
-        then
-            pushd "$i" > /dev/null
-            echo "$(sloc) $i"
-            popd > /dev/null
-        fi
-    done
-}
-
-slog() {
-    svn log --stop-on-copy $* | less
-}
-
 todo() {
     $EDITOR ~/.todo
 }
