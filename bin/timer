@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+n=0
+while [ 1 -eq 1 ]
+do
+    echo $n
+    n=$((n + 1))
+    sleep 1
+done

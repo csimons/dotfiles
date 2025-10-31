@@ -42,22 +42,6 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
 
-timer() {
-    if [ $# -ne 0 ]
-    then
-        >&2 echo 'usage: timer'
-        return 1
-    fi
-
-    local n=0
-    while [ 1 -eq 1 ]
-    do
-        echo $n
-        local n=$((n + 1))
-        sleep 1
-    done
-}
-
 todo() {
     vim $HOME/.todo
 }
