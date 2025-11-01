@@ -8,10 +8,7 @@ export PATH="$HOME/.bin:$PATH"
 
 alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
-
-todo() {
-    $EDITOR ~/.todo
-}
+alias todo="$EDITOR $HOME/.todo #"
 
 if [ -f ~/.motd ]
 then

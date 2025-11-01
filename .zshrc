@@ -8,6 +8,7 @@ export PATH="$HOME/.bin:$PATH"
 
 alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
+alias todo="$EDITOR $HOME/.todo #"
 
 ########## BEGIN: MAKE ZSH MORE LIKE BASH
 
@@ -41,10 +42,6 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-
-todo() {
-    vim $HOME/.todo
-}
 
 if [ -f ~/.motd ]
 then
