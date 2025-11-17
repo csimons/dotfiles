@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+
+import sys
+
+if __name__ == "__main__":
+    if len(sys.argv) != 1:
+        progname = __file__.rsplit("/", maxsplit=1)[-1]
+        sys.stderr.write(
+            f"sample usage: cat foo.csv | cut -d , -f 1 | {progname}\n")
+        sys.exit(1)
+
+    first = True
+    last = ""
+    count = 1
+    for raw_line in sys.stdin:
+        line = raw_line.strip()
+        if first:
+            last = line
+            count = 1
+            first = False
+            continue
+
+        if line == last:
+            count += 1
+            continue
+
+        if line != last:
+            print(f"{last}\t{count}")
+            last = line
+            count = 1
+
+    print(f"{last}\t{count}")
