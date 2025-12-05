@@ -6,6 +6,7 @@ export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 export PATH="$HOME/.bin:$PATH"
 
+alias dp='docker ps --format "table {{.Names}}\t{{.Status}}" #'
 alias gdiff='diff -u --color=always'
 alias lynx='lynx -accept_all_cookies'
 alias todo="$EDITOR $HOME/.todo #"
