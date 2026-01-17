@@ -14,7 +14,7 @@ background = "#000000"
 [colors.cursor]
 text = "#ffffff"
 #cursor = "#0060FF" # Blue
-cursor = "#880000"
+cursor = "#CC0000"
 
 [selection]
 save_to_clipboard = true
