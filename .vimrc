@@ -92,6 +92,7 @@ autocmd FileType go         set ts=8 sts=8 noexpandtab
 autocmd FileType makefile   set ts=8 sts=8 noexpandtab
 
 autocmd FileType javascript set ts=2 sts=2
+autocmd FileType json       set ts=2 sts=2
 autocmd FileType eruby      set ts=2 sts=2
 autocmd FileType feature    set ts=2 sts=2
 autocmd FileType nomad      set ts=2 sts=2
