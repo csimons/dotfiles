@@ -10,6 +10,10 @@ alias dp='docker ps --format "table {{.Names}}\t{{.Status}}" #'
 alias lynx='lynx -accept_all_cookies'
 alias todo="$EDITOR $HOME/.todo #"
 
+diff() {
+    command diff -u --color=auto "$@"
+}
+
 if [ -f ~/.motd ]
 then
     cat ~/.motd | head -n 1
