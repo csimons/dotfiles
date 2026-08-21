@@ -5,6 +5,7 @@ export EDITOR=vim
 export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH" # Default path for Claude.
 
 alias dp='docker ps --format "table {{.Names}}\t{{.Status}}" #'
 alias lynx='lynx -accept_all_cookies'
