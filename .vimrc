@@ -89,6 +89,7 @@ autocmd FileType gitcommit  set textwidth=71 colorcolumn=50,72
 
 autocmd FileType c          set ts=8 sts=8 noexpandtab
 autocmd FileType go         set ts=8 sts=8 noexpandtab
+autocmd FileType ino        set ts=4 sts=4 noexpandtab
 autocmd FileType makefile   set ts=8 sts=8 noexpandtab
 
 autocmd FileType javascript set ts=2 sts=2
