@@ -1,0 +1,32 @@
+# Disable auto-updates to avoid confusing the OS package manager.
+auto-update = off
+
+# Window
+window-width = 120
+window-height = 36
+background-opacity = 0.95
+window-decoration = auto
+
+# Font
+font-family = GohuFont 14 Nerd Font
+font-style = Regular
+font-size = 14
+
+# Colors
+background = #000000
+foreground = #FFFFFF
+cursor-color = #CC0000
+cursor-text = #ffffff
+
+# Selection
+copy-on-select = true
+
+# Keybindings
+# Cmd+Up: maximize/unmaximize the window (matches Alacritty's ToggleMaximized;
+# currently a no-op on macOS since Ghostty has no native "maximized" state there)
+keybind = cmd+up=toggle_maximize
+
+# Alt+Left / Alt+Right: send ESC B / ESC F for shell word-back/word-forward,
+# matching the raw escape sequences from the Alacritty config
+keybind = alt+left=text:\x1bB
+keybind = alt+right=text:\x1bF
