@@ -1,6 +1,8 @@
 # Disable auto-updates to avoid confusing the OS package manager.
 auto-update = off
 
+quit-after-last-window-closed = true
+
 # Window
 window-width = 120
 window-height = 36
