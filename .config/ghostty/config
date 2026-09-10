@@ -10,7 +10,7 @@ window-decoration = auto
 # Font
 font-family = GohuFont 14 Nerd Font
 font-style = Regular
-font-size = 14
+font-size = 16
 
 # Colors
 background = #000000
