@@ -20,7 +20,12 @@ theme = Campbell
 # Colors
 background = #000000
 foreground = #FFFFFF
-cursor-color = #CC0000
+
+# Cursor
+shell-integration-features = no-cursor
+cursor-style = block
+cursor-style-blink = true
+cursor-color = #0088FF
 cursor-text = #ffffff
 
 # Selection
