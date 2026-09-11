@@ -6,6 +6,9 @@ export GIT_EDITOR=$EDITOR
 export FORCE_COLOR=1
 export PATH="$HOME/.bin:$PATH"
 
+export LSCOLORS="GxFxcxdxbxegedabagacad"
+alias ls='ls -G'
+
 alias dp='docker ps --format "table {{.Names}}\t{{.Status}}" #'
 alias lynx='lynx -accept_all_cookies'
 alias todo="$EDITOR $HOME/.todo #"
