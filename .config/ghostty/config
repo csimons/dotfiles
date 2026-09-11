@@ -12,7 +12,7 @@ window-decoration = auto
 # Font
 font-family = GohuFont 14 Nerd Font
 font-style = Regular
-font-size = 16
+font-size = 14
 
 # Terminal color palette theme
 theme = Campbell
