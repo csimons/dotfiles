@@ -16,6 +16,11 @@ set showcmd              " Show partial commands at bottom.
 set scrolloff=10         " Keep at least N lines above/below cursor.
 set sidescrolloff=10     " Keep at least N lines left/right of cursor.
 
+set mouse=a              " Enable mouse (wheel scrolling, clicks).
+if exists('$TMUX')
+    set ttymouse=sgr     " Vim can't detect the mouse protocol under tmux.
+endif
+
 set list                             " Show whitespace.
 set listchars=tab:>-,trail:~         " Whitespace display modifications.
 highlight NonText ctermfg=red ctermbg=none
