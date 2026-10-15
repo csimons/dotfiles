@@ -21,6 +21,12 @@ if exists('$TMUX')
     set ttymouse=sgr     " Vim can't detect the mouse protocol under tmux.
 endif
 
+" Make the scroll wheel move the cursor (like j/k) instead of scrolling.
+noremap  <ScrollWheelUp>   k
+noremap  <ScrollWheelDown> j
+inoremap <ScrollWheelUp>   <Up>
+inoremap <ScrollWheelDown> <Down>
+
 set list                             " Show whitespace.
 set listchars=tab:>-,trail:~         " Whitespace display modifications.
 highlight NonText ctermfg=red ctermbg=none
