@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+# Start tmux in interactive shells, unless already inside a tmux session.
+if [[ $- == *i* ]] && [ -z "$TMUX" ] && [ -t 1 ] && command -v tmux >/dev/null 2>&1
+then
+    exec tmux
+fi
+
 export PS1='\w \$ '
 export EDITOR=vim
 export GIT_EDITOR=$EDITOR
