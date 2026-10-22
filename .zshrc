@@ -1,23 +1,11 @@
 #!/usr/bin/env zsh
 
-# Start tmux in interactive shells, unless already inside a tmux session.
-if [[ $- == *i* ]] && [ -z "$TMUX" ] && [ -t 1 ] && command -v tmux >/dev/null 2>&1
+if [ -f ~/.shrc ]
 then
-    exec tmux
+    source ~/.shrc
 fi
 
 export PS1='%~ %# '
-export EDITOR=vim
-export GIT_EDITOR=$EDITOR
-export FORCE_COLOR=1
-export PATH="$HOME/.bin:$PATH"
-
-export LSCOLORS="GxFxcxdxbxegedabagacad"
-alias ls='ls -G'
-
-alias dp='docker ps --format "table {{.Names}}\t{{.Status}}" #'
-alias lynx='lynx -accept_all_cookies'
-alias todo="$EDITOR $HOME/.todo #"
 
 ########## BEGIN: MAKE ZSH MORE LIKE BASH
 
@@ -51,15 +39,6 @@ setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history 
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
 setopt HIST_BEEP                 # Beep when accessing nonexistent history.
-
-diff() {
-    command diff -u --color=auto "$@"
-}
-
-if [ -f ~/.motd ]
-then
-    cat ~/.motd | head -n 1
-fi
 
 if [ -f ~/.local.zshrc ]
 then
