@@ -26,9 +26,10 @@ shell-integration-features = no-cursor
 cursor-style = block
 cursor-style-blink = true
 cursor-text = #ffffff
-cursor-color = #FF0000
 #cursor-color = #0088FF
 #cursor-color = #00FF88
+#cursor-color = #FF0000
+cursor-color = #FF0000
 
 # Selection
 copy-on-select = true
