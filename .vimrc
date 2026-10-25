@@ -1,5 +1,6 @@
 set fileencodings=utf-8
 
+set background=dark      " Use colors suited to a dark terminal.
 syntax on                " Syntax highlighting.
 set autoindent           " Auto-indent upon opening new line.
 set colorcolumn=72,80    " Show width boundary.
