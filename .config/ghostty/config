@@ -6,7 +6,7 @@ quit-after-last-window-closed = true
 # Window
 window-width = 120
 window-height = 36
-background-opacity = 0.8
+background-opacity = 0.85
 window-decoration = auto
 
 # Font
