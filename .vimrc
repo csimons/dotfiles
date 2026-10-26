@@ -6,7 +6,7 @@ set autoindent           " Auto-indent upon opening new line.
 set colorcolumn=72,80    " Show width boundary.
 
 highlight ColorColumn ctermbg=gray
-highlight Visual term=reverse cterm=reverse
+highlight Visual term=reverse cterm=NONE ctermfg=black ctermbg=yellow guifg=black guibg=yellow
 
 set hlsearch             " Highlight search term matches.
 set showmatch            " Show matching bracket.
