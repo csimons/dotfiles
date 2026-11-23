@@ -6,8 +6,9 @@ quit-after-last-window-closed = true
 # Window
 window-width = 120
 window-height = 36
-background-opacity = 0.8
+background-opacity = 0.5
 window-decoration = auto
+keybind = super+u=toggle_background_opacity
 
 # Font
 font-family = GohuFont 14 Nerd Font
